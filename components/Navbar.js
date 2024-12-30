@@ -3,10 +3,11 @@
 import Link from 'next/link'
 import React from 'react'
 import { Button } from "@/components/ui/button"
-
+import { ModeToggle } from './theme-btn'
 function Navbar() {
     return (
         <>
+
             <nav className="flex justify-around items-center p-4 ">
                 <Link href="/"><div className="text-2xl font-bold">ShanuLogo</div></Link>
                 <div className=" hidden md:flex-row md:items-center md:gap-4 md:block">
@@ -20,9 +21,10 @@ function Navbar() {
                     <span className="h-1 w-8 bg-white mb-1"></span>
                     <span className="h-1 w-8 bg-white"></span>
                 </div>
-                <div className='items-center'>
+                <div className='flex items-center'>
                     <Button className="mx-2" variant="outline">Login</Button>
                     <Button className="mx-2" variant="outline">Sign up</Button>
+                    <ModeToggle />
                 </div>
 
             </nav>
