@@ -1,15 +1,33 @@
 
-
+"use client"
+import React from 'react';
 import { Button } from "@/components/ui/button"
-
+import { useEffect, useRef } from "react";
+import Typed from 'typed.js';
 export default function Home() {
+
+  const el = useRef(null);
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['Coding', 'Web Development', "Software Engineering", 'Machine Learning', 'Data Science'],
+      typeSpeed: 50,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
+
+  //  <span ref={el} />
   return (
     <>
       <main className=" h-screen mx-12">
         <section className="container px-4 py-10 mx-auto lg:h-128 lg:space-x-8 lg:flex lg:items-center">
           <div className="w-full text-center lg:text-left lg:w-1/2 lg:-mt-8 mx-16">
             <h1 className="text-3xl leading-snug text-gray-800 dark:text-gray-200 md:text-4xl">
-              A <span className="font-semibold">free repository</span> for community <br className="hidden lg:block" /> components using <span className="font-semibold underline decoration-primary">Tailwind CSS</span>
+              A <span className="font-semibold">free repository</span> for community <br className="hidden lg:block" /> components using <span className="font-semibold underline decoration-primary"><span ref={el} /></span>
             </h1>
             <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
               Open source Tailwind UI components and templates to <br className="hidden lg:block" /> bootstrap your new apps, projects or landing sites!

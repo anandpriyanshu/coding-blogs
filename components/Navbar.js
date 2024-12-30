@@ -1,14 +1,45 @@
 
-
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from './theme-btn'
+import LoadingBar from "react-top-loading-bar";
+import { usePathname } from 'next/navigation'
 function Navbar() {
+
+    const pathname = usePathname()
+    const [progress, setprogress] = useState(0)
+
+
+    useEffect(() => {
+
+        setprogress(30)
+        setTimeout(() => {
+            setprogress(70)
+        }, 100)
+
+        setTimeout(() => {
+            setprogress(100)
+        }, 800)
+    }, [pathname])
+
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            setprogress(0)
+        }, 900)
+    }, [])
     return (
         <>
 
             <nav className="flex justify-around items-center p-4 ">
+                <LoadingBar
+                    color="#f11946"
+                    progress={progress}
+                    onLoaderFinished={() => setprogress(0)}
+                />
                 <Link href="/"><div className="text-2xl font-bold">ShanuLogo</div></Link>
                 <div className="hidden md:flex-row md:items-center md:gap-4 md:block">
                     <Link href="/" className="py-2 px-4 hover:text-white hover:bg-gray-700 rounded">Home</Link>
