@@ -18,16 +18,41 @@ const blogs = [
         date: "2023-09-15",
         author: "Jane Smith",
         image: "/coding.avif"
-    }, {
-        title: "JavaScript Best Practices",
-        description: "Learn the best practices for writing clean JavaScript.",
-        slug: "javascript-best-practices",
-        date: "2023-09-15",
-        author: "Jane Smith",
+    },
+    {
+        title: "Getting Started with Python",
+        description: "An introduction to Python programming for beginners.",
+        slug: "getting-started-with-python",
+        date: "2023-08-20",
+        author: "Alice Johnson",
+        image: "/coding.avif"
+    },
+    {
+        title: "Java Fundamentals",
+        description: "Explore the core concepts of Java programming.",
+        slug: "java-fundamentals",
+        date: "2023-07-10",
+        author: "Bob Brown",
+        image: "/coding.avif"
+    },
+    {
+        title: "C++ for Beginners",
+        description: "A comprehensive guide to getting started with C++.",
+        slug: "cpp-for-beginners",
+        date: "2023-06-05",
+        author: "Charlie Davis",
+        image: "/coding.avif"
+    },
+    {
+        title: "SQL Database Management",
+        description: "Learn how to manage databases using SQL effectively.",
+        slug: "sql-database-management",
+        date: "2023-05-15",
+        author: "Diana Evans",
         image: "/coding.avif"
     }
-
 ];
+
 
 function Blog() {
     return (
