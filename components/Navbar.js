@@ -34,7 +34,7 @@ function Navbar() {
     return (
         <>
 
-            <nav className="flex justify-around items-center p-4 bg-background/50 sticky top-0 border-b backdrop-blur ">
+            <nav className="flex justify-around items-center p-4 bg-background/50 sticky top-0 border-b backdrop-blur-0 ">
                 <LoadingBar
                     color="#f11946"
                     progress={progress}
@@ -53,7 +53,7 @@ function Navbar() {
                     <span className="h-1 w-8 bg-white"></span>
                 </div>
                 <div className='flex items-center'>
-                    <Link href="/about"> <Button className="mx-2" variant="outline">Login</Button></Link>
+                    <Link href='/login'><Button className="mx-2" variant="outline">Login</Button></Link>
                     <Button className="mx-2" variant="outline">Sign up</Button>
                     <ModeToggle />
                 </div>
